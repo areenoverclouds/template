@@ -18,7 +18,6 @@ using namespace std;
 #define no         cout << "NO\n"
 
 typedef long long ll;
-void swap(int &x, int &y) {int temp = x; x = y; y = temp;}
 const ll MOD = 1e9 + 7;
 const ll INF  = 1e18;
 
@@ -36,10 +35,16 @@ signed main() {
     
     ios_base::sync_with_stdio(false); 
     cin.tie(NULL); cout.tie(NULL);
+	
+    #ifndef ONLINE_JUDGE
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+    #endif
     
-    int t = 1;
+    int t = 1, cas = 1;
     cin >> t;
     while(t--){
+	// cout << "Case " << cas << ": "; cas++;
         solve();
     }    
 	return 0;
